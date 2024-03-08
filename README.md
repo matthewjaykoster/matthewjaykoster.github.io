@@ -1,6 +1,6 @@
 # Matt Koster's Website
 
-This git repository stores code, assets, and information for [Matt Koster's personal website](matthewjaykoster.github.io).
+This git repository stores code, assets, and information for [Matt Koster's personal website](https://matthewjaykoster.github.io).
 
 This website was built using [Resume](https://startbootstrap.com/theme/resume/), a resume and CV theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/).
 
@@ -17,8 +17,8 @@ This website was built using [Resume](https://startbootstrap.com/theme/resume/),
 To use this site as a basis for your own, choose one of the following options to get started:
 
 - [Download the latest release on Start Bootstrap](https://startbootstrap.com/theme/resume/) instead of using this repository.
-- Install using npm: `npm i startbootstrap-resume`
-- Clone the repo: `git clone https://github.com/matthewjaykoster/matthewjaykoster.github.io.git`
+- Install the base template using npm: `npm i startbootstrap-resume`
+- Clone this repo: `git clone https://github.com/matthewjaykoster/matthewjaykoster.github.io.git`
 - [Fork, Clone, or Download on GitHub](https://github.com/matthewjaykoster/matthewjaykoster.github.io.git)
 
 ## Usage
@@ -29,7 +29,7 @@ After downloading, simply edit the HTML and CSS files included with `dist` direc
 
 ### Advanced Usage
 
-Clone the source files of the theme and navigate into the theme's root directory. Run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `package.json` file to see which scripts are included.
+Clone the source files of the theme and navigate into the theme's root directory. Run `npm install` and then run `npm start` which will open up a preview in your default browser, watch for changes, and live reload the browser when changes are saved. You can view the `package.json` file to see which scripts are included.
 
 #### npm Scripts
 
