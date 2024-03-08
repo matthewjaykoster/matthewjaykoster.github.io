@@ -6,7 +6,7 @@ This website was built using [Resume](https://startbootstrap.com/theme/resume/),
 
 ## Preview
 
-[![Website Preview](https://github.com/matthewjaykoster/matthewjaykoster.github.io/blob/master/dist/assets/img/profile.jpg?raw=true)](matthewjaykoster.github.io)
+[![Website Preview](https://github.com/matthewjaykoster/matthewjaykoster.github.io/blob/master/readme-assets/website-preview.png?raw=true)](matthewjaykoster.github.io)
 
 ## Status
 
