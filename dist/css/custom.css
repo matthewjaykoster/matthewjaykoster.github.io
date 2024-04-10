@@ -1,0 +1,29 @@
+/*!
+ * Custom styles written to extend bootstrap functionality
+ */
+ 
+.fade-in-short-delay {
+    animation-name: fadeInWithDelay;
+    animation-duration: 2s;
+}
+
+.fade-in-medium-delay {
+    animation-name: fadeInWithDelay;
+    animation-duration: 4s;
+}
+
+.fade-in-long-delay {
+    animation-name: fadeInWithDelay;
+    animation-duration: 6s;
+}
+
+.fade-in-extra-long-delay {
+    animation-name: fadeInWithDelay;
+    animation-duration: 10s;
+}
+
+@keyframes fadeInWithDelay {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
