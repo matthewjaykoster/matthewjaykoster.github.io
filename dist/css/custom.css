@@ -1,6 +1,9 @@
 /*!
  * Custom styles written to extend bootstrap functionality
  */
+ .mouseover-action {
+    cursor: pointer;
+ }
  
 .fade-in-short-delay {
     animation-name: fadeInWithDelay;
@@ -9,17 +12,17 @@
 
 .fade-in-medium-delay {
     animation-name: fadeInWithDelay;
-    animation-duration: 4s;
+    animation-duration: 3s;
 }
 
 .fade-in-long-delay {
     animation-name: fadeInWithDelay;
-    animation-duration: 6s;
+    animation-duration: 4s;
 }
 
 .fade-in-extra-long-delay {
     animation-name: fadeInWithDelay;
-    animation-duration: 10s;
+    animation-duration: 6s;
 }
 
 @keyframes fadeInWithDelay {
