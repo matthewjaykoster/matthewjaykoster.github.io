@@ -37,3 +37,9 @@ Clone the source files of the theme and navigate into the theme's root directory
 - `npm start` or `npm run start` runs the project, launches a live preview in your default browser, and watches for changes made to files in `src`
 
 You must have npm installed in order to use this build environment.
+
+#### JS Editing
+
+The scripts contained within this project are an amalgamation of a number of different technologies and projects. Currently, the main portion of the site runs using minimal JS, with a small amount in order to support its bootstrap theme.
+
+However, the lab works with a number of frameworks and technologies, including React. README files are proivded within the `src` folder with each functional area containing a README file which defines its specific set of tech, deployment instructions, and notes.
