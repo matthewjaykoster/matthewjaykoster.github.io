@@ -7,3 +7,7 @@ Center Meeting is small Google Maps application which allows the user to find re
 The JS files in this folder are meant to be bundled using webpack into the `dist/js/center-meeting` folder as an `index.js` file. Note the abnormal directory structure - due to deployment with GitHub pages, the root `index.html` file MUST be in the project's root directory, and not in the `dist` or `src` folder.
 
 The command to do so is below:
+`npm run build`
+
+Or, if you prefer an unminified bundle for dev work:
+`npm run build:dev`
