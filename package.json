@@ -5,6 +5,7 @@
     "scripts": {
         "build": "npx webpack",
         "build:dev": "npx webpack --mode development",
+        "build:debug": "npx webpack --mode development --watch",
         "start": "node scripts/start.js",
         "start:debug": "node scripts/start-debug.js"
     },

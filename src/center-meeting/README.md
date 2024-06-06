@@ -11,3 +11,6 @@ The command to do so is below:
 
 Or, if you prefer an unminified bundle for dev work:
 `npm run build:dev`
+
+Or, if you want a watched compilation:
+`npm run build:debug`
