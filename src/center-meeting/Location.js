@@ -11,12 +11,14 @@ export class Location {
      * Creates an instance of Location.
      *
      * @constructor
+     * @param {string} [id] The location's unique identifier. If unspecified, set using the current UTC timestamp.
      * @param {string} [name] The location's name
      * @param {string} [address] The location's address
      * @param {number} [latitude] The location's latitude
      * @param {number} [longitude] The location's longitude
      */
-    constructor(name, address, latitude, longitude) {
+    constructor(id, name, address, latitude, longitude) {
+        this.id = id ?? new Date().getTime();
         this.name = name;
         this.address = address;
         this.latitude = latitude;

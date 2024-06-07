@@ -4,21 +4,63 @@ import { Location } from './Location';
 /**
  * Creates a UI control which allows for viewing and editing a location.
  *
- * @param {*} location The location object managed by this component...but with an additional top-level property that has the same name as the property. For some reason.
+ * @param {*} location The location object managed by this component.
+ * @param {Function} handleDelete A function which will be called when the delete button is clicked.
  * @returns {*} A React Component which allows for viewing and editing a location.
  */
-function LocationOptions( location ) {
-    location = location.location; // For some reason, when I pass this as a prop via the React Component, the object gains a new Top-Level Property which has the same name as the property and contains the actual data I'm looking for.
-    let locationEditor = (
+function LocationOptions( { location, handleAddressChange, handleDelete, handleNameChange } ) {
+    // Local functions
+    function handleEditClick() {
+        swapEditMode();
+    }
+
+    function handleKeyDown(e) {
+        if (e.key === "Enter") {
+            swapEditMode();
+        }
+    }
+
+    function swapEditMode() {
+        setIsEditMode( !isEditMode );
+    }
+
+    // Local state
+    const [ isEditMode, setIsEditMode ] = useState( isEmpty( location.name ) );
+
+    // Component code
+    let editButtonClass = "fa fa-pen";
+    let addressEditor = (
         <>
             <b>Address:</b> {location.address}
         </>
     );
+    let nameEditor = (
+        <strong className="col-8 mb-1 text-truncate" >{location.name}</strong>
+    );
 
-    if ( location.isLatLongMode() ) {
-        locationEditor = (
+    if ( isEditMode ) {
+        editButtonClass = "fa fa-check";
+
+        addressEditor = (
             <>
-                <b>Lat/Long:</b> [ {location.latitude}, {location.longitude} ]
+                <input name="location-address"
+                    className="form-control"
+                    type="text"
+                    placeholder="Address"
+                    value={location.address}
+                    onChange={e => handleAddressChange( location, e )}
+                    onKeyDown={handleKeyDown}></input>
+            </>
+        );
+
+        nameEditor = (
+            <>
+                <input name="location-name"
+                    className="form-control"
+                    type="text"
+                    placeholder="Name"
+                    value={location.name}
+                    onChange={e => handleNameChange( location, e )}></input>
             </>
         );
     }
@@ -26,19 +68,19 @@ function LocationOptions( location ) {
     return (
         <>
             <div className="list-group-item py-3 lh-tight">
-                <div className="d-flex w-100 align-items-center">
-                    <strong className="col-8 mb-1 text-truncate" >{location.name}</strong>
+                <div className="d-flex mb-1 w-100 align-items-center">
+                    {nameEditor}
                     <div className="offset-1 col-3 d-flex justify-content-end">
-                        <button type="button" className="btn btn-default">
-                            <small><i className="fa fa-pen"></i></small>
+                        <button type="button" className="btn btn-default" onClick={handleEditClick}>
+                            <small><i className={editButtonClass}></i></small>
                         </button>
-                        <button type="button" className="btn btn-default">
+                        <button type="button" className="btn btn-default" onClick={() => handleDelete( location )}>
                             <small><i className="fa fa-trash"></i></small>
                         </button>
                     </div>
                 </div>
                 <div className="col-12 mb-1 small">
-                    {locationEditor}
+                    {addressEditor}
                 </div>
             </div>
         </>
@@ -52,16 +94,43 @@ function LocationOptions( location ) {
  * @returns {*}
  */
 export default function CenterMeetingApp() {
-    const locations = [
-        new Location( "Someplace", "12345 Some Ln, Somewhere City, AL 98765" ),
-        new Location( "Random POI", null, 42.9777086, -85.6831788 ),
-    ];
+    // Local functions
+    function handleAddLocation() {
+        const newLocation = new Location();
+        const nextLocations = locations.concat(newLocation);
+        setLocations(nextLocations);
+    }
 
-    // I have no idea why passing the location object via a prop here adds an additional Top-Level Property with the
-    // same name as the property, but it does...
+    function handleAddressChange( locationToEdit, event ) {
+        const editIndex = locations.findIndex( location => location.id === locationToEdit.id );
+        const nextLocations = locations.slice();
+        nextLocations[ editIndex ].address = event.target.value;
+        setLocations( nextLocations );
+    }
+
+    function handleDeleteLocation( locationToDelete ) {
+        const deleteIndex = locations.findIndex( location => location.id === locationToDelete.id );
+        const nextLocations = locations.filter( ( location, index ) => index !== deleteIndex );
+        setLocations( nextLocations );
+    }
+
+    function handleNameChange( locationToEdit, event ) {
+        const editIndex = locations.findIndex( location => location.id === locationToEdit.id );
+        const nextLocations = locations.slice();
+        nextLocations[ editIndex ].name = event.target.value;
+        setLocations( nextLocations );
+    }
+
+    // Local state
+    const [ locations, setLocations ] = useState( [] );
+
+    // Component code
     const locationItems = locations.map( location => (
         <>
-            <LocationOptions location={location} />
+            <LocationOptions location={location}
+                handleAddressChange={handleAddressChange}
+                handleDelete={handleDeleteLocation}
+                handleNameChange={handleNameChange} />
         </>
     ) );
     return (
@@ -73,10 +142,9 @@ export default function CenterMeetingApp() {
                     </div>
                     <div id="location-list" className="list-group list-group-flush border-bottom scrollarea">
                         {locationItems}
-                        <div className="list-group-item list-group-item-action py-3 lh-tight mouseover-action">
-                            <div className="align-items-center">
-                                <i className="fa fa-circle-plus"></i>
-                                Add Location
+                        <div className="list-group-item list-group-item-action py-3 lh-tight mouseover-action" onClick={handleAddLocation}>
+                            <div className="d-flex align-items-center justify-content-center">
+                                <i className="fa fa-plus"></i>
                             </div>
                         </div>
                     </div>
@@ -90,4 +158,9 @@ export default function CenterMeetingApp() {
             </div>
         </>
     );
+}
+
+// "Private" functions
+function isEmpty( value ) {
+    return value === undefined || value === null || value === '';
 }
