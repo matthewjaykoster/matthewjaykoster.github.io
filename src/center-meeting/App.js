@@ -14,14 +14,16 @@ function LocationOptions( { location, handleAddressChange, handleDelete, handleN
         swapEditMode();
     }
 
-    function handleKeyDown(e) {
-        if (e.key === "Enter") {
+    function handleKeyDown( e ) {
+        if ( e.key === "Enter" ) {
             swapEditMode();
         }
     }
 
     function swapEditMode() {
-        setIsEditMode( !isEditMode );
+        if (location.address && location.name) {
+            setIsEditMode( !isEditMode );
+        }
     }
 
     // Local state
@@ -60,10 +62,21 @@ function LocationOptions( { location, handleAddressChange, handleDelete, handleN
                     type="text"
                     placeholder="Name"
                     value={location.name}
-                    onChange={e => handleNameChange( location, e )}></input>
+                    onChange={e => handleNameChange( location, e )}
+                    onKeyDown={handleKeyDown}></input>
             </>
         );
     }
+
+    // Disable button if one of address or name is blank
+    const isSaveDisabled = !location.address || !location.name;
+    const saveButton = (
+        <>
+            <button type="button" className="btn btn-default disabled-red" onClick={handleEditClick} disabled={isSaveDisabled}>
+                <small><i className={editButtonClass}></i></small>
+            </button>
+        </>
+    );
 
     return (
         <>
@@ -71,9 +84,7 @@ function LocationOptions( { location, handleAddressChange, handleDelete, handleN
                 <div className="d-flex mb-1 w-100 align-items-center">
                     {nameEditor}
                     <div className="offset-1 col-3 d-flex justify-content-end">
-                        <button type="button" className="btn btn-default" onClick={handleEditClick}>
-                            <small><i className={editButtonClass}></i></small>
-                        </button>
+                        {saveButton}
                         <button type="button" className="btn btn-default" onClick={() => handleDelete( location )}>
                             <small><i className="fa fa-trash"></i></small>
                         </button>
@@ -97,8 +108,8 @@ export default function CenterMeetingApp() {
     // Local functions
     function handleAddLocation() {
         const newLocation = new Location();
-        const nextLocations = locations.concat(newLocation);
-        setLocations(nextLocations);
+        const nextLocations = locations.concat( newLocation );
+        setLocations( nextLocations );
     }
 
     function handleAddressChange( locationToEdit, event ) {

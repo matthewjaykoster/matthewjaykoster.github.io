@@ -1,10 +1,15 @@
 /*!
  * Custom styles written to extend bootstrap functionality
  */
- .mouseover-action {
+.disabled-red:disabled {
+    color: red !important;
+    opacity: 20% !important;
+}
+
+.mouseover-action {
     cursor: pointer;
- }
- 
+}
+
 .fade-in-short-delay {
     animation-name: fadeInWithDelay;
     animation-duration: 2s;
@@ -26,7 +31,15 @@
 }
 
 @keyframes fadeInWithDelay {
-    0% { opacity: 0; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
