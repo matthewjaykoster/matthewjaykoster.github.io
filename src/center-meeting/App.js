@@ -165,7 +165,7 @@ export default function CenterMeetingApp() {
                 <div className="b-divider"></div>
             </div>
             <div className="col">
-                <img className="img-fluid" src="/dist/assets/img/under-construction.png" alt="..." />
+                <img className="img-fluid" src="/dist/assets/img/under-construction.png" alt="This page is under construction, and not yet functional." />
             </div>
         </>
     );

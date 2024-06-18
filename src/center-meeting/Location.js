@@ -25,11 +25,6 @@ export class Location {
         this.longitude = longitude;
     }
 
-    isLatLongMode() {
-        return this.latitude !== null && this.latitude !== undefined &&
-            this.longitude !== null && this.longitude !== undefined;
-    }
-
     /**
      * Returns the location as a string, preferring the address.
      *
