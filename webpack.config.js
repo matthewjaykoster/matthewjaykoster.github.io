@@ -1,3 +1,4 @@
+const DotEnv = require( 'dotenv-webpack' );
 const path = require( 'path' );
 
 module.exports = {
@@ -6,6 +7,9 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve( __dirname, 'dist/js/center-meeting' ),
     },
+    plugins: [
+        new DotEnv()
+    ],
     module: {
         rules: [
             {

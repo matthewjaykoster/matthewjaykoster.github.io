@@ -9,6 +9,9 @@
         "start": "node scripts/start.js",
         "start:debug": "node scripts/start-debug.js"
     },
+    "pre-commit": [
+        "build"
+    ],
     "description": "My resume website, based on a simple, yet elegant resume and CV theme for Bootstrap 5, 'Resume'.",
     "homepage": "https://matthewjaykoster.github.io",
     "license": "MIT",
@@ -33,7 +36,9 @@
         "browser-sync": "2.29.1",
         "chokidar": "3.5.3",
         "concurrently": "6.3.0",
+        "dotenv-webpack": "^8.1.0",
         "postcss": "8.4.21",
+        "pre-commit": "^1.2.2",
         "prettier": "2.8.6",
         "pug": "3.0.2",
         "sass": "1.60.0",

@@ -31,6 +31,10 @@ After downloading, simply edit the HTML and CSS files included with `dist` direc
 
 Clone the source files of the theme and navigate into the theme's root directory. Run `npm install` and then run `npm start` which will open up a preview in your default browser, watch for changes, and live reload the browser when changes are saved. You can view the `package.json` file to see which scripts are included.
 
+### Lab Usage
+
+Some modules within the lab require API Keys for 3rd party services. In order to use these modules, create a `.env` file in the project root based on the `.env.example`, filling in required keys and variables with your own.
+
 #### npm Scripts
 
 You must have npm installed in order to use this build environment.
