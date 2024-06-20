@@ -25,7 +25,11 @@ To use this site as a basis for your own, choose one of the following options to
 
 ### Basic Usage
 
-After downloading, simply edit the HTML and CSS files included with `dist` directory or the `index.html` file in the root directory. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+After downloading, run `npm install`.
+
+Then, simply edit the HTML and CSS files included with `dist` directory or the `index.html` file in the root directory. These are the only files you need to worry about, you can ignore everything else...unless you want to changes to JS files! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+
+*Note: This repo runs a pre-commit hook to ensure that webpack always builds JS files for production prior to git commits. If commits seem to take a long time, or commits fail, this is the likely cause.*
 
 ### Advanced Usage
 
