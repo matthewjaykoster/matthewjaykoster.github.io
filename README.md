@@ -33,10 +33,14 @@ Clone the source files of the theme and navigate into the theme's root directory
 
 #### npm Scripts
 
-- `npm run start:debug` runs the project in debug mode
-- `npm start` or `npm run start` runs the project, launches a live preview in your default browser, and watches for changes made to files in `src`
-
 You must have npm installed in order to use this build environment.
+
+- `npm run start:debug` runs the project in debug mode
+- `npm start` or `npm run start` runs the project, launches a live preview in your default browser, and watches for changes made to files, reloading the page when changes are discovered.
+- `npm run build` utilizes webpack to bundle and minify the JS files contained within the `src` directory.
+- `npm run build:dev` does the same thing as `run build`, except it does not minify the JS files.
+- `npm run build:debug` does the same thing as `run build:dev`, except it also watches for changes to JS files within the `src` directory and re-bundles when chnages are discovered.
+
 
 #### JS Editing
 
