@@ -6,11 +6,15 @@
         "build": "npx webpack",
         "build:dev": "npx webpack --mode development",
         "build:debug": "npx webpack --mode development --watch",
+        "precommit-msg-start": "echo 'Running pre-commit checks...' && exit 0",
+        "precommit-msg-complete": "echo 'Pre-commit checks complete.' && exit 0",
         "start": "node scripts/start.js",
         "start:debug": "node scripts/start-debug.js"
     },
     "pre-commit": [
-        "build"
+        "precommit-msg-start",
+        "build",
+        "precommit-msg-complete"
     ],
     "description": "My resume website, based on a simple, yet elegant resume and CV theme for Bootstrap 5, 'Resume'.",
     "homepage": "https://matthewjaykoster.github.io",
