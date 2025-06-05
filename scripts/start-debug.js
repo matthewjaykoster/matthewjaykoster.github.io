@@ -5,7 +5,7 @@ const browserSyncPath = upath.resolve(upath.dirname(__filename), '../node_module
 
 concurrently([
     { 
-        command: `${browserSyncPath} dist -w --no-online`,
+        command: `${browserSyncPath} -w --no-online`,
         name: 'SB_BROWSER_SYNC', 
         prefixColor: 'bgBlue.bold',
     }
