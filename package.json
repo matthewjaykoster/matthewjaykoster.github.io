@@ -3,13 +3,19 @@
     "name": "matt-koster-website",
     "version": "0.9.0",
     "scripts": {
-        "build": "npx webpack --mode production",
-        "build:dev": "npx webpack --mode development",
-        "build:debug": "npx webpack --mode development --watch",
+        "build": "npm run build:site && npm run build:lab",
+        "build:site": "node scripts/render-site.js",
+        "build:lab": "npx webpack --mode production",
+        "build:dev": "npm run build:site && npx webpack --mode development",
+        "build:debug": "npm run build:site && npx webpack --mode development --watch",
         "precommit-msg-start": "echo 'Running pre-commit checks...' && exit 0",
         "precommit-msg-complete": "echo 'Pre-commit checks complete.' && exit 0",
         "start": "node scripts/start.js",
-        "start:debug": "node scripts/start-debug.js"
+        "start:site": "node scripts/start.js",
+        "start:lab": "node scripts/start-lab.js",
+        "start:debug": "node scripts/start-debug.js",
+        "dev": "npm run start:site",
+        "dev:lab": "npm run start:lab"
     },
     "pre-commit": [
         "precommit-msg-start",

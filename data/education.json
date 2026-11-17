@@ -1,0 +1,21 @@
+[
+    {
+        "school": "Calvin University",
+        "degree": "Bachelor of Science in Computer Science and Mathematics",
+        "period": "August 2010 - May 2014",
+        "details": [
+            "GPA: 3.90",
+            "Trustee Scholarship Recipient: I had the honor of being awarded the prestigious Trustee Scholarship, the highest-ranking scholarship for academic achievement. Due to my efforts, I was awarded this honor every semester until graduation. This recognition reflects my commitment to excellence in my studies.",
+            "Dean's List: Throughout my college tenure, I earned a place on the Dean's List every semester. This achievement highlights my dedication to maintaining high academic standards and achieving excellence in my coursework.",
+            "Research Assistant at Hope College: During the summer of 2012, I had the opportunity to contribute to the field of computer science as a Research Assistant in the Hope College Computer Science Department. My focus was on computer security education, where I immersed myself in testing and learning various security tools. Subsequently, I applied this knowledge to construct engaging lessons and labs, empowering others to delve into the world of computer security."
+        ]
+    },
+    {
+        "school": "Holland Christian High School",
+        "degree": "High School Diploma",
+        "period": "August 2006 - May 2010",
+        "details": [
+            "GPA: 3.96"
+        ]
+    }
+]

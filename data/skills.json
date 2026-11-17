@@ -1,0 +1,62 @@
+{
+    "technical": [
+        {
+            "label": "AI",
+            "items": [
+                "ChatGPT prompting",
+                "Copilot agentic development"
+            ]
+        },
+        {
+            "label": "AWS Serverless Technologies",
+            "items": [
+                "API Gateway",
+                "DynamoDB",
+                "EventBridge",
+                "Lambda",
+                "SES",
+                "SNS",
+                "SQS"
+            ]
+        },
+        {
+            "label": "AWS IoT Core, including MQTT5",
+            "items": [ ]
+        },
+        {
+            "label": "Excel",
+            "items": [ ]
+        },
+        {
+            "label": "Programming Languages",
+            "items": [
+                "C#",
+                "HTML",
+                "JavaScript",
+                "NodeJS",
+                "TypeScript"
+            ]
+        },
+        {
+            "label": "Rest and GraphQL APIs",
+            "items": [ ]
+        },
+        {
+            "label": "Version Control Systems, such as Git, GitHub, GitLab, Bitbucket, and Azure DevOps",
+            "items": [ ]
+        },
+        {
+            "label": "X.509 Certificates, Authentication, and Authorization",
+            "items": [ ]
+        }
+    ],
+    "management": [
+        "Agile Development and Scrum",
+        "Deep technical understanding",
+        "Emotional intelligence, based on reported trust from team members",
+        "Learning growth and mindset for self and others",
+        "Meeting direction and facilitation",
+        "Response, clear communication",
+        "Team-based strategic direction setting aligned to business goals"
+    ]
+}

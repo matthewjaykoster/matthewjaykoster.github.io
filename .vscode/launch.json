@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Center Meeting in Browser",
+            "type": "pwa-chrome",
+            "request": "launch",
+            "url": "http://localhost:3000/lab/center-meeting/",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "outFiles": [
+                "${workspaceFolder}/dist/js/center-meeting/*.js"
+            ],
+            "sourceMapPathOverrides": {
+                "webpack:///./*": "${webRoot}/*",
+                "webpack:///src/*": "${webRoot}/src/*",
+                "webpack:///./src/*": "${webRoot}/src/*",
+                "webpack:///*": "${webRoot}/*",
+                "webpack-internal:///./src/*": "${webRoot}/src/*",
+                "webpack-internal:///src/*": "${webRoot}/src/*"
+            },
+            "trace": true,
+            "console": "integratedTerminal"
+        }
+    ]
+}

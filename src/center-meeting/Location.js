@@ -18,7 +18,7 @@ export class Location {
      * @param {number} [longitude] The location's longitude
      */
     constructor(id, name, address, latitude, longitude) {
-        this.id = id ?? new Date().getTime();
+        this.id = id ?? `${Date.now()}-${Math.random().toString(16).slice(2)}`;
         this.name = name;
         this.address = address;
         this.latitude = latitude;

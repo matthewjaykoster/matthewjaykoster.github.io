@@ -1,0 +1,35 @@
+[
+    {
+        "title": "Software Development Manager",
+        "company": "Vervint",
+        "period": "February 2023 - March 2025",
+        "paragraphs": [
+            "For the past 11 years, I’ve honed my engineering skills and leveraged my technical expertise to grow into a passionate people leader.",
+            "In my most recent role as Software Development Manager, I had the privilege of leading a talented team of 12+ engineers, helping them grow both personally and professionally. Beyond managing the team, I collaborated closely with a broader group of 40 engineers, 2 peer managers, and my director, ensuring alignment on business processes and goals. I worked with technical leaders to define strategies, implement feedback loops between our back-office teams and business functions, and, of course, keep our clients happy. My two primary focuses were converting implicit key processes into documented, explicit ones and building strong connections with my engineers—drawing on my own experience as a hands-on technical contributor to ensure everything ran smoothly."
+        ]
+    },
+    {
+        "title": "Team Lead, Connected Products",
+        "company": "Vervint",
+        "period": "February 2023 - March 2025",
+        "paragraphs": [
+            "As Team Lead, Connected Products, I led a team of 5 individuals, fostering their personal and professional development and guiding them toward success. Simultaneously, I took ownership of crucial business and technical processes across a broader team of 10, collaborating with peers throughout the organization. Aligning the team's vision, I worked in partnership with architects and engineers to drive execution and implementation. Despite managerial responsibilities, I remained hands-on, delivering expert-level code and technical architectures for various clients."
+        ]
+    },
+    {
+        "title": "Senior Cloud Consultant",
+        "company": "Vervint",
+        "period": "April 2021 - February 2023",
+        "paragraphs": [
+            "As a Senior Cloud Consultant, I led project deliveries for diverse clients in agile settings, utilizing Scrum and SAFe methodologies. My focus included creating, testing, maintaining, and delivering applications interfacing with clients and connecting to Internet of Things devices. I specialized in architecting, creating, and maintaining microservices based in the AWS Cloud. This involved multiple connected products, web clients, and mobile clients, utilizing a suite of technologies such as API Gateway, CloudFormation, CloudFront, CloudWatch, DynamoDB, IoT Core, Lambda, and NodeJS."
+        ]
+    },
+    {
+        "title": "Cloud Consultant (Software Developer I & II)",
+        "company": "Vervint",
+        "period": "May 2013 - April 2021",
+        "paragraphs": [
+            "Prior to my current leadership roles, as a Software Consultant (Software Developer II) and as a Software Developer, I participated in delivering fullstack web applications and AWS cloud-native digital backbones for projects across multiple industries, including consumer appliances, energy, and manufacturing."
+        ]
+    }
+]

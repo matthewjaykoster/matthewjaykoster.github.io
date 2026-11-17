@@ -1,0 +1,27 @@
+[
+    {
+        "group": "AWS",
+        "items": [
+            {
+                "label": "AWS Solutions Architect - Associate",
+                "href": "dist/assets/pdf/aws_sa_associate.pdf",
+                "range": "Jan '21 - Jan '24"
+            },
+            {
+                "label": "AWS Solutions Architect - Professional",
+                "href": "dist/assets/pdf/aws_sa_professional.pdf",
+                "range": "Mar '21 - Mar '24"
+            }
+        ]
+    },
+    {
+        "group": "Microsoft",
+        "items": [
+            {
+                "label": "Microsoft Certified Professional",
+                "href": "dist/assets/pdf/ms_certified_professional.pdf",
+                "range": ""
+            }
+        ]
+    }
+]

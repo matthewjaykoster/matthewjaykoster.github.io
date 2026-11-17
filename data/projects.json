@@ -1,0 +1,55 @@
+[
+    {
+        "title": "Aperia Technologies, Inc - IoT Platform Architecture and Build",
+        "link": "https://aperiatech.com/",
+        "description": "Led a team of 3 developers to architect, design, and implement a next-generation IoT platform hosted on AWS, enabling real-time analytics, notifications, command-and-control capabilities, and interoperability with existing platforms.",
+        "technologies": [
+            "Amazon/AWS: API Gateway, CDK, CloudWatch, Cognito, DynamoDB, IAM, IoT Core, Kinesis, Lambda, Route 53, S3, SNS, SQS, X-Ray"
+        ]
+    },
+    {
+        "title": "Traeger Grills - IoT Platform Maintenance",
+        "link": "https://www.traeger.com/",
+        "description": "Entered a leaderless project and provided management, mentoring, and lead development for a team of 5+ developers managing an IoT platform connecting 750k+ devices. Implemented numerous DevOps processes to ensure platform stability in partnership with business leadership.",
+        "technologies": [
+            "Amazon/AWS: API Gateway, CloudFormation, CloudFront, CloudWatch, Cognito, DynamoDB, ECR, Fargate, IAM, IoT Core, Kinesis, Lambda, Route 53, S3, SNS, SQS, X-Ray",
+            "Angular, CSS, HTML",
+            "Google Firebase Notifications",
+            "NodeJS"
+        ]
+    },
+    {
+        "title": "Bissell - IoT Platform Development",
+        "link": "https://www.bissell.com/",
+        "description": "Developed a next-generation IoT platform alongside a team of peers, deepening expertise with AWS and IoT technologies.",
+        "technologies": [
+            "Amazon/AWS: API Gateway, CloudFormation, CloudFront, CloudWatch, Cognito, DynamoDB, ECR, Fargate, IAM, IoT Core, Kinesis, Lambda, Route 53, S3, SNS, SQS, X-Ray",
+            "Angular, CSS, HTML",
+            "NodeJS"
+        ]
+    },
+    {
+        "title": "Sandler & Travis - Web Platform Development",
+        "link": "https://www.strtrade.com/",
+        "description": "Brought into a failing project after two previous contracts were released. Within months, scaled the team to seven, transforming a financial loss into significant profit while being looked to for leadership despite relative inexperience.",
+        "technologies": [
+            "Angular",
+            "ASP.NET Core",
+            "C#",
+            "MSSQL"
+        ]
+    },
+    {
+        "title": "Resume Website",
+        "link": "https://github.com/matthewjaykoster/matthewjaykoster.github.io",
+        "description": "Created this resume website from concept to live hosting in under four hours, leveraging modern web tooling and GitHub Pages.",
+        "technologies": [
+            "ChatGPT",
+            "GitHub Copilot",
+            "GitHub Pages",
+            "HTML, CSS, JavaScript",
+            "NodeJS",
+            "ReactJS (Lab only)"
+        ]
+    }
+]
